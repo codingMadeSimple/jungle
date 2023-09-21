@@ -57,6 +57,13 @@
           <ul class="dropdown-menu dropdown-menu-dark">
             <li><%= link_to 'Dashboard', [:admin, :root], class: "nav-link" %></li>
             <li><%= link_to 'Products', [:admin, :products], class: "nav-link" %></li>
+            <li>    <% if current_user %>
+            Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
+          <% else %>
+            <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+          <% end %>
+          
+          <%= yield %></li>
           </ul>
         </li>
         <li class="nav-item end-0">
@@ -65,8 +72,10 @@
         </li>
       </ul>
     </div>
+
   </div>
 </nav>
+
 <script>
 (function(){
 const gnr = () => {
