@@ -12,7 +12,7 @@ RSpec.describe Product, type: :model do
           category: @category
         )
         expect(@product).to be_valid
-        expect(product.errors.full_messages).to include("Name can't be blank")
+        expect(@product.errors.full_messages).to be_empty
       end
 
       it 'does not save when the name value is nil.' do
@@ -24,19 +24,19 @@ RSpec.describe Product, type: :model do
           category: @category
         )
         expect(@product).not_to be_valid
-        puts @product.errors.full_messages
+        expect(@product.errors.full_messages).to include("Name can't be blank")
       end
 
       it 'does not save when the price input is nil.' do
         @category = Category.create(name: 'Small Trees')
         @product = Product.new(
           name: "Bonsai tree",
-          price: nil,
+          price: "some string",
           quantity: 7, 
           category: @category
         )
-        puts @product.errors.full_messages
-        # expect(@product).not_to be_valid
+        expect(@product).not_to be_valid
+        expect(@product.errors.full_messages).to include("Price is not a number")
       end
 
   end
