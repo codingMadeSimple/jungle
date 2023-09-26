@@ -3,7 +3,7 @@
   <header class="page-header">
     <h1>My Cart</h1>
   </header>
-
+  <% if cart_subtotal_cents > 0 %>
   <div class="panel panel-default items">
     <table class="table table-bordered">
       <thead>
@@ -25,15 +25,21 @@
             TOTAL:
           </th>
           <th>
-            <%= cart_subtotal_cents / 100.0 %>
+          <span>$<%= cart_subtotal_cents / 100.0 %></span>
           </th>
         </tr>
       </tfoot>
     </table>
   </div>
+  <% else %>
+  <h3 class ="alert">Please add something to cart in order to checkout</h3>
+  <% end %>
+
+
 
   <div class="row">
     <div class="col-xs-12">
+    <% if cart_subtotal_cents > 0 %>
       <%= form_tag orders_path do %>
         <script
           src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -45,6 +51,7 @@
           data-email="kvirani@gmail.com"
           data-currency="cad">
         </script>
+      <% end %>      
       <% end %>
     </div>
   </div>
