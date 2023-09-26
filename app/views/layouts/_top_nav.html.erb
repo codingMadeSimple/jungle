@@ -73,7 +73,7 @@
     <% if current_user %>
     Signed in as <%= current_user.email %> | <%= link_to "Logout", '/logout' %>
     <% else %>
-    <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
+    <%= link_to 'Login', '/login', class: "sign-in-text" %> | <%= link_to 'Signup', '/signup', class: "sign-in-text" %>
     <% end %>
     </div>
   </div>
