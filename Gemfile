@@ -59,10 +59,13 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'dotenv-rails'
   #Removed gem 'rspec-rails'
-  #Added gems for cypress
   gem "cypress-rails"
   gem 'database_cleaner-active_record'
+
 end
+
+#Can I group this one with the one above?
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
