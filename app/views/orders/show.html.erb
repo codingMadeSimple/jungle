@@ -31,7 +31,11 @@
   </table>
 </div>
   <div class="order-summary jumbotron">
-    <h4>Thank you for your order <%= @order.email%>!</h4>
+  <% if current_user.email%>
+    <h4>Thank you for your order <%= current_user.email%>!</h4>
+  <% else %> 
+  <h4>Thank you for your order!<h4>
+  <% end %>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
