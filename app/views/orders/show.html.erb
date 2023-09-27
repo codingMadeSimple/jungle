@@ -31,7 +31,7 @@
   </table>
 </div>
   <div class="order-summary jumbotron">
-  <% if current_user.email%>
+  <% if current_user%>
     <h4>Thank you for your order <%= current_user.email%>!</h4>
   <% else %> 
   <h4>Thank you for your order!<h4>
