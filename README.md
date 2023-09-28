@@ -32,3 +32,14 @@ More information in their docs: <https://stripe.com/docs/testing#cards>
 
 ## Screenshots
 
+![The HomePage and Logo](https://github.com/codingMadeSimple/jungle/blob/master/docs/HomePage.png?raw=true "Homepage and Logo")
+
+![Logged in User](https://github.com/codingMadeSimple/jungle/blob/master/docs/UserLoggedIn.png?raw=true "User Logged In")
+
+![My Cart Page](https://github.com/codingMadeSimple/jungle/blob/master/docs/UserCart.png?raw=true "My Cart")
+
+![Order Confirmation](https://github.com/codingMadeSimple/jungle/blob/master/docs/OrderConfirmation.png?raw=true "Order Confirmation")
+
+![Admin Authentication](https://github.com/codingMadeSimple/jungle/blob/master/docs/AdminAuthentication.png?raw=true "Admin Authentication")
+
+![Admin Add Product](https://github.com/codingMadeSimple/jungle/blob/master/docs/AdminNewProduct.png?raw=true "Admin Add Product")
